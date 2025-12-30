@@ -1,0 +1,476 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e4e4e4;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Новогодний эффект снега */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1.5em;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.snowflake:nth-child(1) {
+    left: 5%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(2) {
+    left: 15%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+    font-size: 1.8em;
+}
+
+.snowflake:nth-child(3) {
+    left: 25%;
+    animation-duration: 9s;
+    animation-delay: 4s;
+    font-size: 1.4em;
+}
+
+.snowflake:nth-child(4) {
+    left: 35%;
+    animation-duration: 11s;
+    animation-delay: 1s;
+    font-size: 1.6em;
+}
+
+.snowflake:nth-child(5) {
+    left: 45%;
+    animation-duration: 13s;
+    animation-delay: 3s;
+    font-size: 1.3em;
+}
+
+.snowflake:nth-child(6) {
+    left: 55%;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    font-size: 1.7em;
+}
+
+.snowflake:nth-child(7) {
+    left: 65%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+    font-size: 1.5em;
+}
+
+.snowflake:nth-child(8) {
+    left: 75%;
+    animation-duration: 11s;
+    animation-delay: 4s;
+    font-size: 1.4em;
+}
+
+.snowflake:nth-child(9) {
+    left: 85%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+    font-size: 1.6em;
+}
+
+.snowflake:nth-child(10) {
+    left: 95%;
+    animation-duration: 13s;
+    animation-delay: 3s;
+    font-size: 1.2em;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+/* Навигация */
+.navbar {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #e4e4e4;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    color: white;
+}
+
+/* Главная секция */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 107, 107, 0.3);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.2);
+}
+
+.home-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: #e4e4e4;
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 107, 107, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+/* Проекты */
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.project-description {
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+.project-info {
+    margin-bottom: 15px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.info-label {
+    color: #888;
+}
+
+.info-value {
+    color: #e4e4e4;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.status-released-active {
+    background: #10b981;
+    color: white;
+}
+
+.status-released-completed {
+    background: #800080;
+    color: white;
+}
+
+.status-released {
+    background: #40E0D0;
+    color: white;
+}
+
+.status-suspended {
+    background: #FFFF00;
+    color: white;
+}
+
+.status-dev {
+    background: #f59e0b;
+    color: white;
+}
+
+.status-closed {
+    background: #808080;
+    color: white;
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 80px 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 2px dashed rgba(255, 107, 107, 0.3);
+}
+
+.clock-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.coming-soon h3 {
+    font-size: 2em;
+    color: #ff6b6b;
+}
+
+/* Контакты */
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.telegram-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #0088cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.contact-text {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #b0b0b0;
+}
+
+.btn-telegram {
+    background: #0088cc;
+    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+}
+
+.btn-telegram:hover {
+    box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+}
+
+/* Футер */
+.footer {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer p {
+    color: #888;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .snowflake {
+        font-size: 1.2em;
+    }
+}
