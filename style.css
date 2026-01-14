@@ -13,8 +13,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow-x: hidden;
 }
 
 .container {
@@ -22,111 +20,6 @@ body {
     margin: 0 auto;
     padding: 20px;
     flex: 1;
-    position: relative;
-    z-index: 1;
-}
-
-/* Новогодний эффект снега */
-.snowflakes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-    overflow: hidden;
-}
-
-.snowflake {
-    position: absolute;
-    top: -10px;
-    color: #fff;
-    font-size: 1.5em;
-    opacity: 0.8;
-    animation: fall linear infinite;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-.snowflake:nth-child(1) {
-    left: 5%;
-    animation-duration: 10s;
-    animation-delay: 0s;
-    font-size: 1.2em;
-}
-
-.snowflake:nth-child(2) {
-    left: 15%;
-    animation-duration: 12s;
-    animation-delay: 2s;
-    font-size: 1.8em;
-}
-
-.snowflake:nth-child(3) {
-    left: 25%;
-    animation-duration: 9s;
-    animation-delay: 4s;
-    font-size: 1.4em;
-}
-
-.snowflake:nth-child(4) {
-    left: 35%;
-    animation-duration: 11s;
-    animation-delay: 1s;
-    font-size: 1.6em;
-}
-
-.snowflake:nth-child(5) {
-    left: 45%;
-    animation-duration: 13s;
-    animation-delay: 3s;
-    font-size: 1.3em;
-}
-
-.snowflake:nth-child(6) {
-    left: 55%;
-    animation-duration: 10s;
-    animation-delay: 5s;
-    font-size: 1.7em;
-}
-
-.snowflake:nth-child(7) {
-    left: 65%;
-    animation-duration: 12s;
-    animation-delay: 2s;
-    font-size: 1.5em;
-}
-
-.snowflake:nth-child(8) {
-    left: 75%;
-    animation-duration: 11s;
-    animation-delay: 4s;
-    font-size: 1.4em;
-}
-
-.snowflake:nth-child(9) {
-    left: 85%;
-    animation-duration: 9s;
-    animation-delay: 1s;
-    font-size: 1.6em;
-}
-
-.snowflake:nth-child(10) {
-    left: 95%;
-    animation-duration: 13s;
-    animation-delay: 3s;
-    font-size: 1.2em;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-10px) rotate(0deg);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0.3;
-    }
 }
 
 /* Навигация */
@@ -135,8 +28,6 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px 0;
-    position: relative;
-    z-index: 100;
 }
 
 .navbar .container {
@@ -149,7 +40,7 @@ body {
 .nav-logo {
     font-size: 1.5em;
     font-weight: bold;
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -174,7 +65,7 @@ body {
 }
 
 .nav-link.active {
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
 
@@ -186,36 +77,24 @@ header {
     border-radius: 20px;
     margin-bottom: 40px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 107, 107, 0.3);
-    box-shadow: 0 0 30px rgba(255, 107, 107, 0.2);
 }
 
 .home-icon {
     width: 100px;
     height: 100px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
 }
 
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -230,13 +109,13 @@ h1 {
 .btn {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .home-buttons {
@@ -248,19 +127,19 @@ h1 {
 
 .btn-secondary {
     background: transparent;
-    border: 2px solid #ff6b6b;
+    border: 2px solid #667eea;
     color: #e4e4e4;
     box-shadow: none;
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 107, 107, 0.15);
+    background: rgba(102, 126, 234, 0.15);
     transform: translateY(-2px);
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
 /* Проекты */
@@ -292,7 +171,7 @@ h2 {
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-image {
@@ -381,7 +260,7 @@ h2 {
     padding: 80px 30px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 20px;
-    border: 2px dashed rgba(255, 107, 107, 0.3);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
 .clock-icon {
@@ -391,7 +270,7 @@ h2 {
 
 .coming-soon h3 {
     font-size: 2em;
-    color: #ff6b6b;
+    color: #888;
 }
 
 /* Контакты */
@@ -438,8 +317,6 @@ h2 {
     padding: 20px 0;
     text-align: center;
     margin-top: 40px;
-    position: relative;
-    z-index: 1;
 }
 
 .footer p {
@@ -468,9 +345,5 @@ h2 {
 
     .projects-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .snowflake {
-        font-size: 1.2em;
     }
 }
